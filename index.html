@@ -174,6 +174,73 @@ footer{border-top:1px solid #161616;padding:3rem 5%;display:flex;justify-content
   .footer-logo{margin-bottom:0}
   footer div{text-align:center !important}
 }
+/* KAKAO FLOAT */
+.kakao-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.kakao-float:hover {
+  transform: scale(1.08);
+}
+.kakao-icon {
+  width: 58px;
+  height: 58px;
+  background: #FEE500;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(254, 229, 0, 0.4);
+  position: relative;
+}
+.kakao-icon img {
+  width: 32px;
+  height: auto;
+}
+.kakao-badge {
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border: 2px solid #fff;
+  animation: pulse 2s infinite;
+}
+.kakao-label {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@media (max-width: 480px) {
+  .kakao-float { bottom: 20px; right: 20px; }
+  .kakao-icon { width: 50px; height: 50px; border-radius: 16px; }
+  .kakao-icon img { width: 26px; }
+  .kakao-label { font-size: 0.65rem; }
+}
+
 .reveal{opacity:0;transform:translateY(30px);transition:all .8s ease-out}
 .reveal.active{opacity:1;transform:translateY(0)}
 </style>
@@ -238,7 +305,7 @@ footer{border-top:1px solid #161616;padding:3rem 5%;display:flex;justify-content
 <!-- STATS -->
 <div class="stats-band">
   <div class="cert-badge">
-    <img src="https://i.ibb.co/Fk52Z8Xv/logo1.png" alt="협회 로고" style="width:64px; height:auto; flex-shrink:0; display:block; object-fit:contain;">
+    <img src="./logo1.png" alt="협회 로고" style="width:64px; height:auto; flex-shrink:0; display:block; object-fit:contain;">
     <div class="cert-text">
       <div class="cert-name">한국DTC유전자상담사교육협회</div>
       <div class="cert-sub">공식 인증기관 · 2026년 기준</div>
@@ -296,7 +363,7 @@ footer{border-top:1px solid #161616;padding:3rem 5%;display:flex;justify-content
       <div class="step-content"><div class="step-num">02</div><div class="step-icon">📊</div><h3>맞춤 분석 리포트</h3><p>비만원인 유형·대사 속도·식욕 유전자·운동 반응성을 정밀 분석합니다.</p></div>
     </div>
     <div class="step">
-      <div class="step-bg" style="background-image:url('https://i.ibb.co/mrCVDLLg/step3-bg.jpg')"></div>
+      <div class="step-bg" style="background-image:url('./step3_bg.png')"></div>
       <div class="step-overlay"></div>
       <div class="step-content"><div class="step-num">03</div><div class="step-icon">🥗</div><h3>개인 맞춤 처방</h3><p>내 유전자에 최적화된 식단·운동·생활습관 프로그램을 설계합니다.</p></div>
     </div>
@@ -537,5 +604,14 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+<!-- KAKAO FLOAT BUTTON -->
+<a href="https://pf.kakao.com/_xxxxxx" target="_blank" class="kakao-float">
+  <div class="kakao-label">1:1 유전자 상담</div>
+  <div class="kakao-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="KakaoTalk">
+    <div class="kakao-badge">1</div>
+  </div>
+</a>
+
 </body>
 </html>
