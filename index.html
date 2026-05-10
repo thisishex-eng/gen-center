@@ -1213,6 +1213,26 @@
       background: #111;
     }
 
+    .team-group-photo {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid var(--bdr);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .team-group-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .team-group-photo:hover img {
+      transform: scale(1.02);
+    }
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1266,6 +1286,23 @@
       font-weight: 700;
     }
 
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+      .team-info {
+        padding: 0.8rem 0.5rem;
+      }
+      .team-info h4 {
+        font-size: 0.95rem;
+      }
+      .team-info p {
+        font-size: 0.65rem;
+        line-height: 1.3;
+      }
+    }
+
     .center-info-card {
       display: flex;
       flex-direction: column;
@@ -1310,6 +1347,80 @@
         max-width: 400px;
         margin: 0 auto;
       }
+    }
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      background: #222;
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.3s;
+      border: 1px solid var(--accent);
+    }
+
+    .map-btn:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* GALLERY GRID STYLES */
+    .gallery-container {
+      max-width: 1200px;
+      margin: 4rem auto 0;
+    }
+
+    .gallery-title-mini {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 1.2rem;
+      margin-bottom: 5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--bdr);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item.large { grid-column: span 2; grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gallery-item { height: 180px; }
+      .gallery-item.large { grid-column: span 2; grid-row: span 1; height: 250px; }
     }
 
     /* ANALYSIS ITEMS */
@@ -1752,6 +1863,55 @@
         <div style="font-size: 0.85rem; color: #555; margin-top: 1rem;">
           📍 경기도 시흥시 서울대학로 59-69<br>배곧테크노벨리 621호
         </div>
+        <a href="https://naver.me/xv6qKDXi" class="map-btn" target="_blank">🗺️ 오시는 길 / 약도 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section reveal">
+    <div class="sec-tag" style="text-align:center; display:block; margin:0 auto .8rem">CENTER GALLERY</div>
+    <h2 class="sec-title" style="text-align:center">전문가와 함께하는<br>프리미엄 상담 공간</h2>
+    
+    <div class="gallery-container">
+      <!-- Part 1: Space -->
+      <div class="gallery-title-mini">Our Space</div>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="./전경1.jpg" alt="센터 내부 전경">
+        </div>
+        <div class="gallery-item">
+          <img src="./전경2.jpg" alt="상담실 전경">
+        </div>
+        <div class="gallery-item">
+          <img src="./전경3.jpg" alt="로비 전경">
+        </div>
+        <div class="gallery-item wide">
+          <img src="./전경4.jpg" alt="센터 전경 4">
+        </div>
+      </div>
+
+      <!-- Part 2: Counseling -->
+      <div class="gallery-title-mini">Counseling Experience</div>
+      <div class="gallery-grid">
+        <div class="gallery-item wide">
+          <img src="./counseling1.jpg" alt="상담 장면 1">
+        </div>
+        <div class="gallery-item">
+          <img src="./counseling2.jpg" alt="상담 장면 2">
+        </div>
+        <div class="gallery-item">
+          <img src="./counseling3.jpg" alt="상담 장면 3">
+        </div>
+        <div class="gallery-item large">
+          <img src="./counseling4.jpg" alt="상담 장면 4">
+        </div>
+        <div class="gallery-item">
+          <img src="./counseling8.jpg" alt="상담 장면 8">
+        </div>
+        <div class="gallery-item">
+          <img src="./counseling9.jpg" alt="상담 장면 9">
+        </div>
       </div>
     </div>
   </section>
@@ -1761,6 +1921,10 @@
     <div class="sec-tag" style="text-align:center; display:block; margin:0 auto .8rem">OUR EXPERTS</div>
     <h2 class="sec-title" style="text-align:center">실력으로 증명하는<br>전문 상담사 팀</h2>
     
+    <div class="team-group-photo">
+      <img src="./단체사진.jpg" alt="유전자 상담사 팀 단체사진">
+    </div>
+
     <div class="team-grid">
       <div class="team-item">
         <div class="team-img"><img src="./counselor1.jpg" alt="상담사 김현진"></div>
@@ -1788,6 +1952,20 @@
         <div class="team-info">
           <h4>상담사 권기순</h4>
           <p>건강 지표 분석 및 맞춤 처방</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor5.jpg" alt="상담사 홍유나"></div>
+        <div class="team-info">
+          <h4>상담사 홍유나</h4>
+          <p>여성 건강 및 호르몬 밸런스 전문가</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor6.jpg" alt="상담사 김영주"></div>
+        <div class="team-info">
+          <h4>상담사 김영주</h4>
+          <p>탈모 예방 및 두피 케어 전문가</p>
         </div>
       </div>
     </div>
