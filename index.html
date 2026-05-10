@@ -1122,6 +1122,484 @@
       opacity: 1;
       transform: translateY(0)
     }
+
+    /* TRUST SECTION */
+    .trust-section {
+      padding: 6rem 5%;
+      background: linear-gradient(to bottom, #080808, #111);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 3.5rem auto 0;
+    }
+
+    .profile-card {
+      background: var(--sur);
+      border: 1px solid var(--bdr);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .profile-img-wrap {
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.5s;
+    }
+
+    .profile-card:hover .profile-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .profile-info {
+      padding: 2rem;
+    }
+
+    .profile-info .name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 0.2rem;
+      color: #fff;
+    }
+
+    .profile-info .title {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .career-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .career-list li {
+      font-size: 0.88rem;
+      color: #aaa;
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .career-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* TEAM GRID */
+    .team-section {
+      padding: 4rem 5% 6rem;
+      background: #111;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+    }
+
+    .team-item {
+      background: var(--sur);
+      border: 1px solid var(--bdr);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .team-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .team-img {
+      width: 100%;
+      aspect-ratio: 1/1.2;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .team-info {
+      padding: 1.2rem;
+    }
+
+    .team-info h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+      color: #fff;
+    }
+
+    .team-info p {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .center-info-card {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .center-img-box {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .center-img-box img {
+      width: 100%;
+      display: block;
+    }
+
+    .center-text-box {
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    .center-text-box h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    .center-text-box p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1000px) {
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .profile-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    /* ANALYSIS ITEMS */
+    .analysis-section {
+      padding: 6rem 5%;
+      background: #080808;
+    }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3.5rem auto 0;
+    }
+
+    .analysis-item {
+      background: var(--sur2);
+      border: 1px solid var(--bdr);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .analysis-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      background: rgba(76, 175, 143, 0.03);
+    }
+
+    .ai-icon {
+      font-size: 2.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ai-content h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .ai-content p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .ai-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .ai-tag {
+      font-size: 0.7rem;
+      color: var(--accent);
+      background: rgba(76, 175, 143, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* REPORT SAMPLE */
+    .report-section {
+      padding: 6rem 5%;
+      background: var(--sur);
+    }
+
+    .report-container {
+      max-width: 1000px;
+      margin: 3.5rem auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .report-preview {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .report-preview img {
+      width: 100%;
+      display: block;
+    }
+
+    .report-text h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .report-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .report-features li {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .report-features li b {
+      color: var(--accent);
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 6rem 5%;
+      background: var(--bg);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 3rem auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--bdr);
+    }
+
+    .faq-q {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+
+    .faq-q:hover {
+      color: var(--accent);
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-a {
+      max-height: 200px;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-icon {
+      font-size: 0.8rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 800px) {
+      .report-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .report-text h3 { font-size: 1.5rem; }
+      .report-features li { justify-content: center; }
+    }
+
+    /* COMPARISON */
+    .comp-section {
+      padding: 6rem 5%;
+      background: #0d0d0d;
+    }
+
+    .comp-table {
+      max-width: 900px;
+      margin: 3.5rem auto 0;
+      background: var(--sur);
+      border: 1px solid var(--bdr);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .comp-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      border-bottom: 1px solid var(--bdr);
+    }
+
+    .comp-row:last-child { border-bottom: none; }
+
+    .comp-head {
+      background: #161616;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .comp-cell {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .comp-label {
+      justify-content: flex-start;
+      text-align: left;
+      font-weight: 700;
+      color: #aaa;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .comp-highlight {
+      color: var(--accent);
+      font-weight: 800;
+      background: rgba(76, 175, 143, 0.03);
+    }
+
+    /* SECURITY */
+    .security-notice {
+      margin-top: 3rem;
+      background: rgba(76, 175, 143, 0.05);
+      border: 1px dashed rgba(76, 175, 143, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sec-icon { font-size: 2rem; }
+    .sec-text h5 {
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+    .sec-text p {
+      font-size: 0.82rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .comp-row {
+        grid-template-columns: 1fr;
+      }
+      .comp-head { display: none; }
+      .comp-label {
+        background: #1a1a1a;
+        color: var(--accent);
+        padding: 0.8rem 1.5rem;
+      }
+      .comp-cell {
+        padding: 1rem 1.5rem;
+        justify-content: flex-start;
+        text-align: left;
+      }
+      .comp-cell::before {
+        content: attr(data-label);
+        font-weight: 800;
+        margin-right: 0.5rem;
+        color: #555;
+        min-width: 80px;
+      }
+    }
   </style>
 </head>
 
@@ -1214,6 +1692,195 @@
     </div>
   </div>
 
+  <!-- TRUST SECTION -->
+  <section class="trust-section reveal">
+    <div class="sec-tag">EXPERT & CENTER</div>
+    <div class="sec-title">데이터 뒤에 숨겨진<br>진짜 의미를 해석합니다</div>
+    <div class="sec-sub">단순히 결과지만 드리지 않습니다. 6년 경력의 유전자 상담사가<br>당신의 체질에 맞는 유일한 해답을 찾아드립니다.</div>
+
+    <div class="trust-grid">
+      <!-- Profile: Center Manager -->
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="./ceo.png" alt="대표 상담사 프로필" style="transform: scale(1.0); object-position: 50% 15%;">
+        </div>
+        <div class="profile-info">
+          <span class="title">대표 컨설턴트 / 유전자 상담사</span>
+          <h3 class="name">서진 센터장</h3>
+          <ul class="career-list">
+            <li><b>전문분야:</b> 비만 관리, 어린이 키 성장</li>
+            <li>한국DTC유전자상담사교육협회 정회원</li>
+            <li>테라젠헬스 공식 인증 상담 전문가</li>
+            <li>유전자 분석 기반 맞춤형 건강 솔루션 설계</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Profile: Vice Manager -->
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="./vice_ceo.jpg" alt="부센터장 프로필" style="transform: scale(1.15); transform-origin: top; object-position: 50% 10%;">
+        </div>
+        <div class="profile-info">
+          <span class="title">부센터장 / 시니어 컨설턴트</span>
+          <h3 class="name">소정화 부센터장</h3>
+          <ul class="career-list">
+            <li><b>전문분야:</b> 만성피로, 에너지 대사 관리</li>
+            <li>유전자 전문 상담사 자격 보유</li>
+            <li>개인별 맞춤 영양 설계 전문가</li>
+            <li>라이프스타일 개선 코칭 500건 이상</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Center Info -->
+      <div class="center-info-card">
+        <div class="center-text-box">
+          <h3>경기 DTC 유전자 전문상담센터</h3>
+          <p>
+            최첨단 유전자 분석 기술과<br>따뜻한 상담이 만나 가장 과학적인<br>건강 솔루션을 제공합니다.
+          </p>
+        </div>
+        <div class="center-img-box">
+          <img src="./현판.jpg" alt="센터 현판 이미지">
+        </div>
+        <div style="font-size: 0.85rem; color: #555; margin-top: 1rem;">
+          📍 경기도 안산시 단원구<br>(상세 위치는 예약 시 안내)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section reveal">
+    <div class="sec-tag" style="text-align:center; display:block; margin:0 auto .8rem">OUR EXPERTS</div>
+    <h2 class="sec-title" style="text-align:center">실력으로 증명하는<br>전문 상담사 팀</h2>
+    
+    <div class="team-grid">
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor1.jpg" alt="상담사 김현진"></div>
+        <div class="team-info">
+          <h4>김현진 상담사</h4>
+          <p>유전자 맞춤 다이어트 전문가</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor2.jpg" alt="상담사 권덕희"></div>
+        <div class="team-info">
+          <h4>권덕희 상담사</h4>
+          <p>식단 및 영양 밸런스 컨설턴트</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor3.jpg" alt="상담사 장미향"></div>
+        <div class="team-info">
+          <h4>장미향 상담사</h4>
+          <p>체형 교정 및 라이프스타일 코칭</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor4.jpg" alt="상담사 권기순"></div>
+        <div class="team-info">
+          <h4>권기순 상담사</h4>
+          <p>건강 지표 분석 및 맞춤 처방</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYSIS ITEMS SECTION -->
+  <section class="analysis-section reveal">
+    <div class="sec-tag">WHAT WE ANALYZE</div>
+    <div class="sec-title">당신의 유전자에 새겨진<br>6가지 건강 지도를 읽어드립니다</div>
+    <div class="sec-sub">비만 원인부터 노화 속도까지, 단순한 추측이 아닌 과학적 데이터로 확인하세요.</div>
+
+    <div class="analysis-grid">
+      <!-- Item 1: Obesity -->
+      <div class="analysis-item">
+        <div class="ai-icon">🍔</div>
+        <div class="ai-content">
+          <h4>비만 및 대사 정밀 분석</h4>
+          <p>내 몸이 탄수화물을 잘 분해하는지, 지방으로 쉽게 쌓이는 체질인지 유전적 특성을 분석합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#체질량지수</span>
+            <span class="ai-tag">#중성지방</span>
+            <span class="ai-tag">#콜레스테롤</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Skin -->
+      <div class="analysis-item">
+        <div class="ai-icon">✨</div>
+        <div class="ai-content">
+          <h4>피부 노화 및 탄력</h4>
+          <p>남들보다 피부 노화가 빠른지, 색소 침착이나 탄력 저하 위험이 어느 정도인지 예측합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#피부탄력</span>
+            <span class="ai-tag">#색소침착</span>
+            <span class="ai-tag">#비타민C대사</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Hair -->
+      <div class="analysis-item">
+        <div class="ai-icon">💇‍♂️</div>
+        <div class="ai-content">
+          <h4>탈모 위험도 예측</h4>
+          <p>남성형 탈모, 모발 굵기 저하 등 미래의 탈모 가능성을 유전적으로 미리 진단합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#탈모위험</span>
+            <span class="ai-tag">#모발굵기</span>
+            <span class="ai-tag">#두피건강</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Nutrients -->
+      <div class="analysis-item">
+        <div class="ai-icon">🍎</div>
+        <div class="ai-content">
+          <h4>영양소 흡수 및 대사</h4>
+          <p>특정 비타민이나 미네랄이 결핍되기 쉬운 체질인지 분석하여 맞춤 영양 솔루션을 제공합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#비타민D</span>
+            <span class="ai-tag">#철분대사</span>
+            <span class="ai-tag">#칼슘흡수</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: Appetite -->
+      <div class="analysis-item">
+        <div class="ai-icon">🧠</div>
+        <div class="ai-content">
+          <h4>식탐 및 식습관 조절</h4>
+          <p>왜 나는 밤마다 배가 고플까? 포만감을 느끼는 유전자와 식욕 조절 능력을 정밀 체크합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#식탐유전자</span>
+            <span class="ai-tag">#포만감민감도</span>
+            <span class="ai-tag">#야식증후군</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6: Exercise -->
+      <div class="analysis-item">
+        <div class="ai-icon">🏃‍♀️</div>
+        <div class="ai-content">
+          <h4>운동 반응성 분석</h4>
+          <p>유산소 운동이 효과적인 체질인지, 근력 운동으로 더 큰 효과를 볼 수 있는지 확인합니다.</p>
+          <div class="ai-tags">
+            <span class="ai-tag">#운동효과</span>
+            <span class="ai-tag">#근육발달</span>
+            <span class="ai-tag">#회복속도</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TYPE SECTION -->
   <section class="type-section reveal">
     <div class="sec-tag">당신의 현재 위치</div>
@@ -1240,6 +1907,50 @@
         <div class="tc-head">컨설팅으로<br><em>변화된 사람</em></div>
         <div class="tc-desc">유전자 맞춤 프로그램을 실천한 사람만이 아는 변화.<br>평균 3개월 -14kg, 요요 없는 지속 가능한 몸.<br>당신도 이 쪽으로 올 수 있다.</div>
         <span class="tc-cta">나도 변화 시작하기 →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON SECTION -->
+  <section class="comp-section reveal">
+    <div class="sec-tag">COMPARISON</div>
+    <div class="sec-title">왜 유전자 다이어트여야 할까요?</div>
+    <div class="sec-sub">의지의 문제가 아닙니다. 지금까지 실패했던 이유는 내 몸을 몰랐기 때문입니다.</div>
+
+    <div class="comp-table">
+      <div class="comp-row comp-head">
+        <div class="comp-cell">비교 항목</div>
+        <div class="comp-cell">일반 다이어트</div>
+        <div class="comp-cell comp-highlight">유전자 맞춤 컨설팅</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell comp-label">분석 근거</div>
+        <div class="comp-cell" data-label="일반">유행하는 식단/운동</div>
+        <div class="comp-cell comp-highlight" data-label="유전자">타고난 유전적 특성</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell comp-label">식단 구성</div>
+        <div class="comp-cell" data-label="일반">무조건 적게 먹기</div>
+        <div class="comp-cell comp-highlight" data-label="유전자">대사 속도별 영양소 비율</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell comp-label">요요 현상</div>
+        <div class="comp-cell" data-label="일반">매우 빈번함</div>
+        <div class="comp-cell comp-highlight" data-label="유전자">지속 가능한 관리로 예방</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell comp-label">성공 확률</div>
+        <div class="comp-cell" data-label="일반">일시적 성공에 그침</div>
+        <div class="comp-cell comp-highlight" data-label="유전자">근본적인 체질 개선</div>
+      </div>
+    </div>
+
+    <!-- Security Notice -->
+    <div class="security-notice">
+      <div class="sec-icon">🛡️</div>
+      <div class="sec-text">
+        <h5>생명윤리법에 따른 철저한 데이터 보안</h5>
+        <p>수집된 유전자 정보는 오직 분석 목적으로만 사용되며, 상담 완료 후 30일 이내에 모든 데이터는 영구 파기됩니다. 개인정보 유출 걱정 없이 안심하고 상담받으세요.</p>
       </div>
     </div>
   </section>
@@ -1356,6 +2067,71 @@
           <div class="video-name">김*윤 고객님</div>
           <div class="video-desc">뚱뚱이 엄마에서 날씬한 쌍둥이 엄마로 변신</div>
           <div class="video-result">✓ 3개월 -18kg + 불면증·변비 해결</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT SAMPLE SECTION -->
+  <section class="report-section reveal">
+    <div class="sec-tag">SAMPLE REPORT</div>
+    <div class="sec-title">막막했던 건강 관리,<br>한 권의 가이드북이 됩니다</div>
+    
+    <div class="report-container">
+      <div class="report-preview">
+        <img src="./report_sample.png" alt="유전자 분석 결과지 샘플">
+      </div>
+      <div class="report-text">
+        <h3>세상에 단 하나뿐인<br>나의 몸 사용 설명서</h3>
+        <ul class="report-features">
+          <li><b>✓</b> 60가지 이상의 정밀 유전자 분석 결과</li>
+          <li><b>✓</b> 맞춤 식단 및 운동 처방 가이드</li>
+          <li><b>✓</b> 주의해야 할 질병 및 생활 습관 조언</li>
+          <li><b>✓</b> 전문가의 1:1 해석 리포트 포함</li>
+        </ul>
+        <p style="margin-top:2rem; font-size:0.85rem; color:#666;">
+          * 실제 결과지는 상담 시 태블릿 또는 책자로 더 상세히 확인하실 수 있습니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section reveal">
+    <div class="sec-tag">F.A.Q</div>
+    <div class="sec-title">자주 묻는 질문</div>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+          검사 방법이 복잡한가요? 아프지는 않나요? <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a">
+          전혀 복잡하지 않습니다. 구강 상피세포 채취 방식으로, 면봉처럼 생긴 전용 도구로 입안을 가볍게 문지르기만 하면 끝납니다. 통증이 전혀 없어 아이들도 쉽게 검사할 수 있습니다.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+          검사 결과가 나오기까지 얼마나 걸리나요? <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a">
+          검체 채취 후 연구소로 발송되어 분석이 완료되기까지 평균적으로 10일~14일 정도 소요됩니다. 결과가 도착하면 담당 컨설턴트가 연락을 드려 상담 일정을 잡게 됩니다.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+          개인정보와 유전자 정보는 안전하게 관리되나요? <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a">
+          네, 매우 엄격하게 관리됩니다. 수집된 모든 정보는 암호화되어 처리되며, 분석이 완료된 후 관련 법규에 따라 일정 기간이 지나면 안전하게 폐기됩니다. 상담 목적으로만 사용되니 안심하셔도 됩니다.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+          상담 비용은 얼마인가요? <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-a">
+          현재 이벤트 기간으로 첫 회 방문 상담은 무료로 진행하고 있습니다. 유전자 검사 패키지 비용은 분석 항목의 개수에 따라 다양하므로, 무료 상담을 통해 본인에게 가장 필요한 구성을 추천받으시는 것이 좋습니다.
         </div>
       </div>
     </div>
