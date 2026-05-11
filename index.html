@@ -1309,6 +1309,27 @@
       gap: 2rem;
     }
 
+    .center-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .center-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+      }
+      .center-header-flex .center-img-box {
+        width: 100% !important;
+        max-width: 240px;
+        align-self: center;
+      }
+    }
+
     .center-img-box {
       border-radius: 20px;
       overflow: hidden;
@@ -1388,7 +1409,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 220px);
+      grid-template-rows: repeat(auto-fill, 250px);
       gap: 1.2rem;
       margin-bottom: 5rem;
     }
@@ -1404,6 +1425,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
@@ -1850,20 +1872,30 @@
       <div class="center-info-card">
         <div class="center-text-box">
           <h3>경기 DTC 유전자 전문상담센터</h3>
-          <p>
-            최첨단 유전자 분석 기술과<br>따뜻한 상담이 만나 가장 과학적인<br>건강 솔루션을 제공합니다.
-          </p>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--accent); font-weight: 700;">
-            📅 100% 사전 예약제 운영
+          <div class="center-header-flex">
+            <div style="flex: 1;">
+              <p style="margin-bottom: 1.2rem; line-height: 1.7;">
+                최첨단 유전자 분석 기술과<br>
+                따뜻한 상담이 만나<br>
+                가장 과학적인<br>
+                건강 솔루션을 제공합니다.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--accent); font-weight: 700;">
+                📅 100% 사전 예약제 운영
+              </div>
+            </div>
+            <div class="center-img-box" style="width: 200px; flex-shrink: 0; margin-bottom: -4px; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+              <img src="./현판.jpg" alt="센터 현판 이미지" style="border-radius: 12px;">
+            </div>
           </div>
         </div>
-        <div class="center-img-box">
-          <img src="./현판.jpg" alt="센터 현판 이미지">
+        <div class="center-img-box" style="margin-top: 1.5rem;">
+          <img src="./map_guide.png" alt="센터 오시는 길 약도">
         </div>
-        <div style="font-size: 0.85rem; color: #555; margin-top: 1rem;">
+        <div style="font-size: 0.85rem; color: #555; margin-top: 1.2rem;">
           📍 경기도 시흥시 서울대학로 59-69<br>배곧테크노벨리 621호
         </div>
-        <a href="https://naver.me/xv6qKDXi" class="map-btn" target="_blank">🗺️ 오시는 길 / 약도 보기</a>
+        <a href="https://naver.me/xv6qKDXi" class="map-btn" target="_blank">🚗 오시는 길</a>
       </div>
     </div>
   </section>
@@ -1904,7 +1936,7 @@
           <img src="./counseling3.jpg" alt="상담 장면 3">
         </div>
         <div class="gallery-item large">
-          <img src="./counseling4.jpg" alt="상담 장면 4">
+          <img src="./counseling10.jpg" alt="상담 장면 4">
         </div>
         <div class="gallery-item">
           <img src="./counseling8.jpg" alt="상담 장면 8">
@@ -1966,6 +1998,20 @@
         <div class="team-info">
           <h4>상담사 김영주</h4>
           <p>탈모 예방 및 두피 케어 전문가</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor7.jpg" alt="상담사 김다윤"></div>
+        <div class="team-info">
+          <h4>상담사 김다윤</h4>
+          <p>유전자 기반 맞춤 운동 및 에너지 대사 관리 전문가</p>
+        </div>
+      </div>
+      <div class="team-item">
+        <div class="team-img"><img src="./counselor8.jpg" alt="상담사 조수정"></div>
+        <div class="team-info">
+          <h4>상담사 조수정</h4>
+          <p>중장년 만성질환 예방 및 영양 컨설팅 전문가</p>
         </div>
       </div>
     </div>
@@ -2328,19 +2374,18 @@
     <div class="contact-box">
       <div id="form-content">
         <h3>📋 무료 상담 신청</h3>
-        <p>간단한 정보만 남겨주시면 전담 컨설턴트가 연락드립니다.</p>
+        <p>간단한 정보만 남겨주시면<br>전담 컨설턴트가 연락드립니다.</p>
         <div class="input-group">
           <input type="text" placeholder="이름" id="inp-name">
           <input type="tel" placeholder="연락처 (010-0000-0000)" id="inp-phone">
           <select id="inp-concern">
             <option value="" disabled selected>현재 나의 상황 선택</option>
-            <option>유전자검사를 아직 안 한 사람</option>
-            <option>유전자검사만 하고 방치 중인 사람</option>
-            <option>체중 감량 원함 (10kg 미만)</option>
-            <option>체중 감량 원함 (10~20kg)</option>
-            <option>체중 감량 원함 (20kg 이상)</option>
-            <option>체지방 감소 / 체형 교정 원함</option>
-            <option>건강 문제 동반 비만</option>
+            <option>다이어트 및 체중 관리 (비만 원인 분석)</option>
+            <option>만성 피로 및 수면 장애 (불면증 개선)</option>
+            <option>장 건강 및 만성 염증 관리 (부종, 독소 배출)</option>
+            <option>만성 질환 예방 및 맞춤 영양 (가족력 관리)</option>
+            <option>피부 노화 및 근본적인 체질 개선</option>
+            <option>유전자 검사 전반 및 기타 상담 문의</option>
           </select>
           <textarea placeholder="추가로 전달하실 내용 (선택사항)" id="inp-memo"></textarea>
         </div>
